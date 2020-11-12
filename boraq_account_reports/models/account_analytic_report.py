@@ -3,14 +3,14 @@
 
 from odoo import api, fields, models, _
 from odoo.addons.web.controllers.main import clean_action
-    
+
+
 class analytic_report(models.AbstractModel):
     _inherit = "account.analytic.report"
     _description = 'Account Analytic Report'
     
     filter_partner = True
 
-    
     @api.model
     def _get_lines(self, options, line_id=None):
         AccountAnalyticGroup = self.env['account.analytic.group']

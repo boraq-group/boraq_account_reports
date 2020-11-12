@@ -6,9 +6,7 @@ from odoo.tools.misc import format_date
 
 
 class report_account_aged_partner(models.AbstractModel):
-    _inherit = "account.aged.partner"
+    _inherit = ["account.aged.partner", "account.report"]
     _description = "Aged Partner Balances"
-    _inherit = 'account.report'
 
     filter_analytic = True
-    
