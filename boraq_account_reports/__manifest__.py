@@ -19,6 +19,7 @@
     'images': ['static/description/banner.png'],
     'data': [
         'views/account_financial_report_data.xml',
+        'views/assets.xml',
         ],
     'demo': [
     ],
