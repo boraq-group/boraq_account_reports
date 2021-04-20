@@ -20,6 +20,7 @@
     'data': [
         'views/account_financial_report_data.xml',
         'views/assets.xml',
+        'views/report_financial.xml',
         ],
     'demo': [
     ],
