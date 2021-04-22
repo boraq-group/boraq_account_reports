@@ -3,12 +3,12 @@
     <data>
 <!--        <template id="account_reports_backend" inherit_id="web.assets_backend" active="True">-->
 <!--            <xpath expr="." position="inside">-->
-<!--                <link rel="stylesheet" href="/boraq_account_reports/static/src/css/style.scss"/>-->
+<!--                <link rel="stylesheet" type="text/scss" href="/boraq_account_reports/static/ssrc/css/style.scss"/>-->
 <!--            </xpath>-->
 <!--        </template>-->
         <template  id="assets_financial_report" inherit_id="account_reports.assets_financial_report">
             <xpath expr="." position="inside">
-                <link rel="stylesheet" href="/boraq_account_reports/static/src/css/style.scss"/>
+                <link rel="stylesheet" type="text/scss" href="/boraq_account_reports/static/src/scss/style.scss"/>
             </xpath>
         </template>
         <template id="main_template" inherit_id="account_reports.main_template">
