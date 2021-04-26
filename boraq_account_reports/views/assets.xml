@@ -7,5 +7,15 @@
                 <script type="text/javascript" src="/boraq_account_reports/static/src/js/account_reports.js"></script>
             </xpath>
         </template>
+<!--        <template id="account_reports_backend" inherit_id="web.assets_backend" active="True">-->
+<!--            <xpath expr="." position="inside">-->
+<!--                <link rel="stylesheet" type="text/scss" href="/boraq_account_reports/static/ssrc/css/style.scss"/>-->
+<!--            </xpath>-->
+<!--        </template>-->
+        <template  id="assets_financial_report" inherit_id="account_reports.assets_financial_report">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/scss" href="/boraq_account_reports/static/src/scss/style.scss"/>
+            </xpath>
+        </template>
     </data>
 </odoo>
