@@ -41,7 +41,7 @@ class analytic_report(models.AbstractModel):
             AccountAnalyticAccount = AccountAnalyticAccount.with_context(tag_ids=analytic_tag_ids)
 
         if options.get('multi_company'):
-            company_ids = [company['id'] for company in options['multi_company'] if company['selected']]
+            company_ids = [company['id'] for company in options['multi_company']]
             if company_ids:
                 analytic_entries_domain += [('company_id', 'in', company_ids)]
                 analytic_account_domain += ['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]
