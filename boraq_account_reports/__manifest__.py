@@ -14,11 +14,12 @@
     'author': "Boraq-Group",
     'website': "",
     'category': 'Accounting',
-    'version': '12.0',
+    'version': '14.0.1.0',
     'depends': ['account_reports','account'],
     'images': ['static/description/banner.png'],
     'data': [
         'views/account_financial_report_data.xml',
+        'views/assets.xml',
         ],
     'demo': [
     ],

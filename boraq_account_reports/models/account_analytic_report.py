@@ -8,7 +8,7 @@ from odoo.addons.web.controllers.main import clean_action
 class analytic_report(models.AbstractModel):
     _inherit = "account.analytic.report"
     _description = 'Account Analytic Report'
-    
+
     filter_partner = True
 
     @api.model
@@ -35,7 +35,7 @@ class analytic_report(models.AbstractModel):
             analytic_entries_domain += [('account_id', 'in', analytic_account_ids)]
             analytic_account_domain += [('id', 'in', analytic_account_ids)]
 
-        if options['analytic_tags']:
+        if options.get('analytic_tags'):
             analytic_tag_ids = [int(id) for id in options['analytic_tags']]
             analytic_entries_domain += [('tag_ids', 'in', analytic_tag_ids)]
             AccountAnalyticAccount = AccountAnalyticAccount.with_context(tag_ids=analytic_tag_ids)
@@ -46,11 +46,12 @@ class analytic_report(models.AbstractModel):
                 analytic_entries_domain += [('company_id', 'in', company_ids)]
                 analytic_account_domain += ['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]
                 AccountAnalyticAccount = AccountAnalyticAccount.with_context(company_ids=company_ids)
-        if options['partner'] and options['partner_ids']:            
+
+        if options['partner'] and options['partner_ids']:
             filter_partner_ids = options['partner_ids']
             analytic_entries_domain += [('partner_id', 'in', filter_partner_ids)]
             analytic_account_domain += [('partner_id', 'in', filter_partner_ids)]
-            
+
         if not options['hierarchy']:
             return self._generate_analytic_account_lines(AccountAnalyticAccount.search(analytic_account_domain))
 
