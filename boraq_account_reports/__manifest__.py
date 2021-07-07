@@ -14,7 +14,7 @@
     'author': "Boraq-Group",
     'website': "",
     'category': 'Accounting',
-    'version': '14.0.1.0',
+    'version': '13.0.1.0',
     'depends': ['account_reports','account'],
     'images': ['static/description/banner.png'],
     'data': [
